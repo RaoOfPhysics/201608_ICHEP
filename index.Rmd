@@ -1,0 +1,32 @@
+---
+title: "Support for participating in outreach and the benefits of doing so"
+author: "Achintya Rao"
+date: "6 August 2016"
+output:
+    revealjs::revealjs_presentation:
+        theme: serif
+        highlight: pygments
+        incremental: true
+        center: true
+        transition: slide
+        reveal_options:
+            slideNumber: true
+        fig_caption: true
+        showNotes: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+dat <- read.csv(file = "../quant_analysis/final_dataset.csv", header = TRUE)
+countries  <- read.csv(file = "data/countries.csv", header = TRUE)
+library(dplyr)
+library(plotly)
+library(gridExtra)
+
+# for long form conversion of data frame
+library(reshape2)
+
+likert_units <- seq(0.0000, 5.0000, by=1)
+```
+
+---

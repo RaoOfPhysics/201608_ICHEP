@@ -30,3 +30,234 @@ likert_units <- seq(0.0000, 5.0000, by=1)
 ```
 
 ---
+
+<section><h1>Conclusions</h1>
+
+## CONCLUSIONS 1
+
+## CONCLUSIONS 2
+
+</section>
+
+---
+
+<section><h1>A bit about me</h1>
+
+##
+
+> - **Science Communicator** (2010 &mdash; present)<br />Compact Muon Solenoid
+(CMS) Collaboration at CERN
+> - **Doctoral Student** (2014 &mdash; present)<br />UWE Science Communication
+Unit, Bristol
+>     - **MA in Science Journalism** (2009 &mdash; 2010)<br />City University,
+London
+>     - **BSc in Physics** (2005 &mdash; 2008)<br />St. Xavier’s College,
+Mumbai (Bombay)
+
+<br />
+<br />
+<small>
+Twitter: [\@RaoOfPhysics](https://twitter.com/RaoOfPhysics) |
+GitHub: [\@RaoOfPhysics](https://github.com/RaoOfPhysics)<br />
+This presentation: [github.com/RaoOfPhysics/201608_ICHEP](https://github.com/RaoOfPhysics/201608_ICHEP)
+</small>
+
+</section>
+
+---
+
+<section><h1>Public engagement</h1>
+
+##
+
+- Conversation dominated with research fields that have:
+    - direct impact
+    - immediate impact
+
+- What about fundamental research?
+
+</section>
+
+---
+
+<section><h1>My PhD project</h1>
+
+## "Engagement" &rarr; "Outreach"
+
+- used to refer to all science-communication activities
+“designed for an audience outside academia” (Crettaz&nbsp;von&nbsp;Roten, 2011, p.54)
+- used among particle physicists to refer to:
+    - working with schools
+    - direct dialogue with the public
+    - disseminating information through the media
+
+##
+
+> The term “outreach” refers to all science communication and education
+activities that bring scientific research to audiences outside
+the research community. It is also known as “popularisation”.
+
+&mdash; note included in survey
+
+## Research questions
+
+- What are the attitudes towards outreach within the particle-physics
+community and what are the motivations for and barriers against participating
+- Do these vary w.r.t.
+age, gender and academic position
+
+## Research questions (…)
+
+- How are these influenced by
+    - funding bodies
+    - national expectations towards outreach
+    - the  multicultural nature of international collaborations
+- How does the community perceive the usefulness and impact of outreach
+
+</section>
+
+---
+
+<section data-background="images/1205187_03-A4-at-144-dpi.jpg">
+
+##
+
+### [CERN](http://home.cern)
+
+The European Laboratory for Particle Physics
+
+- Geneva, Switzerland
+- host laboratory for international collaborations
+- ~half of all 20,000 particle physicists
+
+</section>
+
+<section data-background="images/0910152_02-A4-at-144-dpi.jpg">
+
+</section>
+
+<section data-background="images/0807031_01-A4-at-144-dpi.jpg">
+
+</section>
+
+<section data-background="images/IMG_9286.JPG">
+
+##
+
+### The CMS Collaboration
+
+[**C**ompact **M**uon **S**olenoid](http://cms.web.cern.ch)
+
+- one of the two teams that [discovered the Higgs boson in 2012](http://cms.web.cern.ch/news/observation-new-particle-mass-125-gev)
+- people (June 2015)
+    - over 4000 physicists, engineers, students  (not including technicians
+        and admin)
+    - 183 institutes, universities, laboratories from 42 countries
+    - 80+ nationalities
+
+</section>
+
+---
+
+<section><h1>Data collection for quantitative analysis</h1>
+
+## Electronic survey distributed by e-mail
+
+- Sent to the whole collaboration via mailing list
+- Three reminders sent to whole list
+- Engineers reminded separately as well
+- Representatives from low-response countries reminded separately
+
+## Responses
+
+- over 400, but a few duplicates
+- final count: **391** valid responses
+- ~10% of the collaboration
+
+## CMS member countries
+
+```{r}
+# Code below by Rik Smith-Unna (@Blahah on GitHub)
+
+# precompute the plot variable - this is required because we'll
+# need to 'melt' the dataframe into long format, which will
+# mix values from different variables in a column
+countries$Country_Response_pc <-
+    countries$Country_Response / countries$Country_Total * 100
+
+# Some R wizardry I have yet to understand - Achintya
+countries$Country <- factor(
+    countries$Country,
+    levels=arrange(countries, -Country_Response)$Country
+    )
+
+# select only the columns we need, then reshape
+# the data frame by 'melting' it to long form.
+# we only have one 'id variable' - country, so
+# all the other variables will be collapsed
+# into just two columns: variable and value
+# we go from one row per country, to one row per value per country
+# this is the format ggplot always uses - and it's super powerful
+countries_long <- melt(
+    countries[, c('Country', 'Country_Response', 'Country_Response_pc')],
+    id=c('Country')
+    )
+
+# now just set x as country, but colour bars by another variable
+p <- ggplot(countries_long, aes(x=Country, y=value, fill=variable)) +
+    # we also need to specify that we want to use the values,
+    # rather than the number of occurences, as the bar size
+    # and that we want the bars side by side 'dodge' rather than
+    # stacked
+    geom_bar(stat='identity', position=position_dodge(), color="white") +
+        coord_cartesian(ylim=c(0, 50))
+
+ggplotly()
+
+```
+</section>
+
+---
+
+<section><h1>CONTENT</h1>
+
+
+</section>
+
+---
+
+<section><h1>Conclusions</h1>
+
+## CONCLUSIONS 1
+
+## CONCLUSIONS 2
+
+</section>
+
+---
+
+<section><h1>Acknowledgements</h1>
+
+##
+
+Emma Weitkamp, Clare Wilkinson, Erik Stengler, Christine Sutton, for supervising my research
+
+Achille Petrilli, CMS Head of Communications, for supporting my research
+
+Special thanks to Richard Smith-Unna (t: [\@blahah404](https://twitter.com/blahah404)) for help with R code!
+
+##
+
+[R](https://www.r-project.org/) + [RStudio](https://www.rstudio.com/)
+
+[reveal.js](http://lab.hakim.se/reveal-js/)
+
+[plotly](https://plot.ly/)
+
+[RAW](http://raw.densitydesign.org/)
+
+[Git](https://git-scm.com/) + [GitHub](https://github.com/)
+
+</section>
+
+# Thank you

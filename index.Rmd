@@ -33,9 +33,15 @@ likert_units <- seq(0.0000, 5.0000, by=1)
 
 <section><h1>Conclusions</h1>
 
-## CONCLUSIONS 1
+## Support for participating in outreach
 
-## CONCLUSIONS 2
+- SUPPORT 1
+- SUPPORT 2
+
+## Benefits of participating in outreach
+
+- BENEFIT 1
+- BENEFIT 2
 
 </section>
 
@@ -66,9 +72,47 @@ This presentation: [github.com/RaoOfPhysics/201608_ICHEP](https://github.com/Rao
 
 ---
 
-<section><h1>Public engagement</h1>
+<section><h1>Science Communication: Evolving Views</h1>
 
-##
+## Scientific Literacy
+
+“greater knowledge about the facts of science will  improve people’s lives while gaining public support for, and reducing opposition to, research”
+
+##  Public Understanding of Science and Technology
+
+> “part of each scientist’s professional responsibility  to promote the public understanding of science”
+
+&mdash; The Royal Society, 1985
+
+## The Deficit Model
+
+“the role of scientists and science communicators is to fill a perceived knowledge deficit among the public”
+
+## Low levels of Scientific Literacy
+
+> “Many [scientists] recognise, in their own inability to be certain of their answers, that the public cannot be expected to retain  facts that are not useful.”
+
+&mdash; Stocklmayer & Bryant, 2012
+
+</section>
+
+---
+
+<section><h1>Public Engagement with Science and Technology</h1>
+
+> “while scientists may have scientific facts at their disposal, the members of the public concerned have local knowledge and an understanding of, and personal interest in, the problems to be solved”
+
+&mdash; Miller, 2001
+
+## Three aspects/stages:
+
+> 1. “scientists […] encouraged to inform the public”
+> 2. “scientists […] encouraged to develop dialogue on scientific facts and processes”
+> 3. “scientists must engage with society in the early phase of scientific development”
+
+&mdash; Crettaz von Roten, 2011
+
+## Science Communication research
 
 - Conversation dominated with research fields that have:
     - direct impact
@@ -111,7 +155,7 @@ age, gender and academic position
 - How are these influenced by
     - funding bodies
     - national expectations towards outreach
-    - the  multicultural nature of international collaborations
+    - the multicultural nature of international collaborations
 - How does the community perceive the usefulness and impact of outreach
 
 </section>

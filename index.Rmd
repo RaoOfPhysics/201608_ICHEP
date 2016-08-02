@@ -33,12 +33,12 @@ likert_units <- seq(0.0000, 5.0000, by=1)
 
 <section><h1>Conclusions</h1>
 
-## Support for participating in outreach
+## Support for outreach participation
 
 - SUPPORT 1
 - SUPPORT 2
 
-## Benefits of participating in outreach
+## Benefits of outreach participation
 
 - BENEFIT 1
 - BENEFIT 2
@@ -263,8 +263,264 @@ ggplotly()
 
 ---
 
-<section><h1>CONTENT</h1>
+<section><h1>Support for outreach participation</h1>
 
+##
+
+```{r}
+imp_because_taxes <- melt(as.matrix(dat[c('imp_because_taxes')]))
+imp_because_taxes$value <- factor(imp_because_taxes$value, 
+                                  levels=c(1, 2, 3, 4, 5))
+
+ggplot(imp_because_taxes, aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“It is important for scientists to take part in outreach activities \nbecause taxes from citizens fund research.”")
+```
+
+*… outreach is important because research is supported by taxes…*
+
+##
+
+```{r}
+funding_should_support <- melt(as.matrix(dat[c('funding_should_support')]))
+funding_should_support$value <- factor(funding_should_support$value, 
+                                       levels=c(1, 2, 3, 4, 5))
+
+ggplot(funding_should_support, aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "““Funding bodies should provide support for scientists \nto communicate their research to the non-specialist public.”")
+```
+
+*… funding bodies should scientists help do outreach…*
+
+##
+
+```{r}
+grants_wider_society <- melt(as.matrix(dat[c('grants_wider_society')]))
+grants_wider_society$value <- factor(grants_wider_society$value, 
+                                     levels=c(1, 2, 3, 4, 5))
+
+ggplot(grants_wider_society, aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“When applying for grants, scientists should be required to provide details \non how their research will be communicated to the wider society.”")
+```
+
+*… outreach details included in grant applications…*
+
+</section>
+
+---
+
+<section><h1>Benefits of outreach participation</h1>
+
+##
+
+```{r}
+attracts_funding <- melt(as.matrix(dat[c('attracts_funding')]))
+attracts_funding$value <- factor(attracts_funding$value, 
+                                 levels=c(1, 2, 3, 4, 5))
+
+ggplot(na.omit(attracts_funding), aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“[Participating in outreach] attracts research funding.”")
+```
+
+*… attracts research funding…*
+
+##
+
+```{r}
+advances_career <- melt(as.matrix(dat[c('advances_career')]))
+advances_career$value <- factor(advances_career$value, 
+                                levels=c(1, 2, 3, 4, 5))
+
+ggplot(na.omit(advances_career), aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“[Participating in outreach] advances my career.”")
+```
+
+*… advances my career…*
+
+##
+
+```{r}
+makes_better_scientist <- melt(as.matrix(dat[c('makes_better_scientist')]))
+makes_better_scientist$value <- factor(makes_better_scientist$value, 
+                                       levels=c(1, 2, 3, 4, 5))
+
+ggplot(na.omit(makes_better_scientist), aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“[Participating in outreach] makes me a better scientist.”")
+```
+
+*… makes me a better scientist…*
+
+##
+
+```{r}
+collaboration_opportunities <-
+    melt(as.matrix(dat[c('collaboration_opportunities')]))
+collaboration_opportunities$value <- factor(collaboration_opportunities$value, 
+                                            levels=c(1, 2, 3, 4, 5))
+
+ggplot(na.omit(collaboration_opportunities), aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“[Participating in outreach] is an opportunity for others \nto contact me for collaborative purposes.”")
+```
+
+*… collaboration opportunities…*
+
+##
+
+```{r}
+research_new_ways <- melt(as.matrix(dat[c('research_new_ways')]))
+research_new_ways$value <- factor(research_new_ways$value, 
+                                  levels=c(1, 2, 3, 4, 5))
+
+ggplot(na.omit(research_new_ways), aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“[Participating in outreach] shapes the direction of my research \nand makes me think about it in new ways.”")
+```
+
+*… think of my research in new ways…*
+
+##
+
+```{r}
+feeling_enjoyment <- melt(as.matrix(dat[c('feeling_enjoyment')]))
+feeling_enjoyment$value <- factor(feeling_enjoyment$value, 
+                                  levels=c(1, 2, 3, 4, 5))
+
+ggplot(na.omit(feeling_enjoyment), aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“I get a feeling of enjoyment \n[from participating in outreach].”")
+```
+
+*… feeling of enjoyment…*
+
+##
+
+```{r}
+job_satisfaction <- melt(as.matrix(dat[c('job_satisfaction')]))
+job_satisfaction$value <- factor(job_satisfaction$value, 
+                                 levels=c(1, 2, 3, 4, 5))
+
+ggplot(na.omit(job_satisfaction), aes(x = value)) + 
+    geom_bar(stat="count", colour="white") + 
+    geom_text(stat="count", aes(label = ..count..,
+                                y=..count..), vjust=-0.5) +
+    scale_x_discrete(name = NULL,
+                     limits = c(1:5), 
+                     drop = FALSE, 
+                     labels = c("1" = "1\nStrongly Disagree",
+                                "2" = "2", "3" = "3", "4" = "4", 
+                                "5" = "5\nStrongly Agree")) +
+    
+    ylab("Count") +
+    theme_bw() +
+    labs(title = "“[Participating in outreach] gives me job satisfaction.”")
+```
+
+*… job satisfaction…*
 
 </section>
 

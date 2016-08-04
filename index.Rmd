@@ -90,7 +90,7 @@ This presentation: [github.com/RaoOfPhysics/201608_ICHEP](https://github.com/Rao
 
 > “part of each scientist’s professional responsibility  to promote the public understanding of science”
 
-&mdash; The Royal Society, 1985
+&mdash; The Royal Society, 1985, p.24
 
 ## The Deficit Model
 
@@ -100,7 +100,7 @@ This presentation: [github.com/RaoOfPhysics/201608_ICHEP](https://github.com/Rao
 
 > “Many [scientists] recognise, in their own inability to be certain of their answers, that the public cannot be expected to retain  facts that are not useful.”
 
-&mdash; Stocklmayer & Bryant, 2012
+&mdash; Stocklmayer & Bryant, 2012, p.18
 
 </section>
 
@@ -112,7 +112,7 @@ This presentation: [github.com/RaoOfPhysics/201608_ICHEP](https://github.com/Rao
 
 > “while scientists may have scientific facts at their disposal, the members of the public concerned have local knowledge and an understanding of, and personal interest in, the problems to be solved”
 
-&mdash; Miller, 2001
+&mdash; Miller, 2001, p.117
 
 ## Three aspects/stages:
 
@@ -120,7 +120,7 @@ This presentation: [github.com/RaoOfPhysics/201608_ICHEP](https://github.com/Rao
 > 2. “scientists […] encouraged to develop dialogue on scientific facts and processes”
 > 3. “scientists must engage with society in the early phase of scientific development”
 
-&mdash; Crettaz von Roten, 2011
+&mdash; Crettaz von Roten, 2011, p.54
 
 ## Science Communication research
 

@@ -1,9 +1,11 @@
 # Support for participating in outreach and the benefits of doing so
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.59928.svg)](http://dx.doi.org/10.5281/zenodo.59928)
 [![Achintya's PhD repos](https://img.shields.io/badge/collection-Achintya's%20PhD%20repos-yellowgreen.svg)](https://github.com/RaoOfPhysics/phd)
 
-Presentation prepared for [my talk at ICHEP 2016](http://indico.cern.ch/event/432527/contributions/1072118/), showing early results from my PhD research.
-The presentation itself can be found at https://via.hypothes.is/https://raoofphysics.github.io/201608_ICHEP
+Presentation for [my talk at ICHEP 2016](http://indico.cern.ch/event/432527/contributions/1072118/), showing early results from my PhD research.
+The video of my talk can be found at [https://www.youtube.com/watch?v=ZavZon1LUbU](https://www.youtube.com/watch?v=ZavZon1LUbU).
+The presentation itself can be found at [https://via.hypothes.is/https://raoofphysics.github.io/201608_ICHEP](https://via.hypothes.is/https://raoofphysics.github.io/201608_ICHEP).
 
 The slides should also be available on a mobile browser, although Firefox isn't loading the interactive plots for some reason.
 Against my better judgement, I recommend you use Chrome on Android to view the content.
